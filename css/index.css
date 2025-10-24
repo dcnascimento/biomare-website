@@ -30,7 +30,7 @@
 }
 
 .hero-subtitle {
-    font-size: 24px; /* Tamanho do subtítulo do wireframe */
+    font-size: 22px; /* Tamanho do subtítulo do wireframe */
     color: var(--cor-preto-suave);
     margin-bottom: 40px; /* Espaçamento entre o texto e o CTA */
 }
