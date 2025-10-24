@@ -1,0 +1,79 @@
+/* --- ESTILOS MVV (MISSÃO, VISÃO, VALORES) --- */
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacamento-card); /* 24px */
+}
+
+.mvv-card {
+    background-color: var(--cor-branco);
+    padding: 30px;
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+}
+
+.mvv-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.mvv-card li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* --- ESTILOS EXCLUSIVOS DO CARTÃO DE VISITAS --- */
+
+.hero-simples {
+    /* Menos altura para o Hero de subpáginas */
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.hero-simples .titulo-principal {
+    max-width: 800px; /* Limita o título */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.resumo-bloco {
+    max-width: 800px; /* Limita a largura do texto para melhor leitura */
+    margin: 0 auto; /* Centraliza o bloco de texto */
+}
+
+.resumo-bloco p {
+    font-size: 18px; /* Fonte maior para a leitura do resumo */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.resumo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacamento-card); /* 24px */
+    margin-top: 40px;
+}
+
+.resumo-card {
+    background-color: var(--cor-branco);
+    padding: 25px;
+    /* Sombreamento e arredondamento vêm de .card */
+}
+
+.resumo-card .titulo-card {
+    margin-bottom: 10px;
+}
+
+.resumo-card p {
+    font-size: 16px; 
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Estilo para o CTA Final (opcional, se quiser um botão maior) */
+.btn-grande {
+    font-size: 18px;
+    padding: 18px 40px;
+}

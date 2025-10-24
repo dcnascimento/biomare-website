@@ -1,0 +1,56 @@
+/* ================================================= */
+/* BASE.CSS: VARIÁVEIS, RESET E HTML BASE */
+/* ================================================= */
+
+:root {
+    /* Cores */
+    --cor-azul-marinho: #0B4367; /* Primária (Texto, Cabeçalhos) */
+    --cor-azul-medio: #10598A;   /* Hover, Títulos de Destaque */
+    --cor-azul-claro: #E6EEF3;   /* Fundo Alternativo (Serviços) */
+
+    --cor-verde-agua: #30D89E;   /* Secundária (Destaques, CTA Primário) */
+    --cor-verde-medio: #24B985;  /* Hover em Botões Verdes */
+    
+    --cor-cinza-areia: #B8AA9C;  /* Neutro (Texto secundário) */
+    --cor-cinza-medio: #D7CEC6;  /* Placeholders, Bordas neutras */
+    --cor-cinza-fundo: #F3F1EF;  /* Fundo Alternativo (Notícias) */
+    
+    --cor-branco: #FFFFFF;
+    --cor-preto-suave: #222222;
+
+    /* Tipografia */
+    --fonte-principal: Montserrat, sans-serif;
+    --peso-regular: 400;
+    --peso-semi-bold: 600;
+    --peso-bold: 700;
+
+    /* Layout */
+    --margin-lateral: 120px;
+    --padding-vertical: 80px; /* Espaçamento padrão entre seções */
+    --espacamento-card: 24px; /* Gutter padrão */
+    --borda-arredondada: 8px;
+}
+
+/* RESET E ESTILOS BASE */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-preto-suave);
+    background-color: var(--cor-branco);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* Seletores de acessibilidade */
+:focus {
+    outline: 2px solid var(--cor-verde-agua);
+    outline-offset: 2px;
+}
+
+/* ... (Mantenha aqui apenas o CSS de variáveis e reset) ... */

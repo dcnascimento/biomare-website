@@ -1,0 +1,114 @@
+/* ================================================= */
+/* CONTATO.CSS: ESTILOS DA PÁGINA CONTATO */
+/* ================================================= */
+
+/* --- LAYOUT PRINCIPAL (2 Colunas) --- */
+
+.contato-grid {
+    display: grid;
+    /* Colunas: 1.5 (Formulário) para 1 (Informações) */
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 60px;
+}
+
+.contato-formulario {
+    padding: 40px;
+    /* Usa estilos de .card do global.css */
+}
+
+.contato-formulario .titulo-secao {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/* --- ESTILOS DO FORMULÁRIO --- */
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-grupo {
+    margin-bottom: 20px;
+}
+
+.input-grupo label {
+    display: block;
+    font-weight: var(--peso-semi-bold);
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: var(--cor-azul-marinho);
+}
+
+.input-grupo input[type="text"],
+.input-grupo input[type="email"],
+.input-grupo select,
+.input-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-cinza-areia);
+    border-radius: var(--borda-arredondada);
+    font-size: 16px;
+    transition: border-color 0.2s;
+    font-family: var(--fonte-principal);
+}
+
+.input-grupo input:focus,
+.input-grupo select:focus,
+.input-grupo textarea:focus {
+    border-color: var(--cor-verde-agua);
+    outline: none;
+}
+
+.input-grupo textarea {
+    resize: vertical;
+}
+
+.contato-formulario .btn-primario {
+    margin-top: 10px;
+    padding: 15px 30px;
+    font-size: 17px;
+}
+
+
+/* --- ESTILOS DAS INFORMAÇÕES DE CONTATO --- */
+
+.contato-info {
+    padding-top: 40px; 
+}
+
+.contato-info .titulo-secao {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.info-bloco {
+    margin-bottom: 30px;
+}
+
+.info-bloco h3 {
+    font-size: 20px;
+    color: var(--cor-azul-marinho);
+    margin-bottom: 5px;
+}
+
+.info-bloco p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.mapa-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: var(--cor-cinza-areia);
+    border-radius: var(--borda-arredondada);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    color: var(--cor-branco);
+    font-weight: var(--peso-bold);
+}

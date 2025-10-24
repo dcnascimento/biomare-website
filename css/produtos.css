@@ -1,0 +1,53 @@
+/* ================================================= */
+/* PRODUTOS.CSS: ESTILOS DA PÁGINA PRODUTOS */
+/* ================================================= */
+
+/* --- LAYOUT DO CATÁLOGO (Reutiliza Grid de 3 Colunas) --- */
+
+.produtos-catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espacamento-card); 
+    margin-top: 40px;
+}
+
+/* Card de Produto no Catálogo (Ajustes de padding e altura) */
+.card-produto-catalogo {
+    padding: 0; /* O padding será interno (em .produto-info-catalogo) */
+    text-align: center; /* Centraliza tudo dentro do card */
+}
+
+.produto-image-container-lg {
+    /* Container que hospeda a imagem */
+    width: 100%;
+    height: 300px; /* Altura um pouco maior para a imagem de catálogo */
+    overflow: hidden;
+    border-top-left-radius: var(--borda-arredondada);
+    border-top-right-radius: var(--borda-arredondada);
+    background-color: var(--cor-cinza-fundo); /* Placeholder */
+}
+
+.produto-image-container-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Adicione transform: rotate(5deg); para padronizar o ângulo se necessário */
+}
+
+.produto-info-catalogo {
+    padding: 20px;
+    padding-bottom: 25px; /* Mais padding embaixo para o link */
+}
+
+.produto-info-catalogo .titulo-card {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.produto-info-catalogo p {
+    font-size: 16px;
+    color: var(--cor-preto-suave);
+    margin-bottom: 15px;
+}
