@@ -1,4 +1,4 @@
-# Biomaré Website]
+# Biomaré - Site Institucional
 
 Bem-vindo ao repositório do Biomaré Website! Este projeto é a versão desktop de um site Institucional/Blog
 
@@ -14,10 +14,11 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - Layout Desktop completo e responsivo (em desenvolvimento).
 - Estrutura de Landing Page com Interativa com acesso às demais páginas
-- Páginas:  Sobre Nós | Serviços | Produtos | Notícias | Parceiros | Contato
+- Páginas: Sobre Nós | Serviços | Produtos | Notícias | Parceiros | Contato
 
 ## 🚀 Como Executar o Projeto
 
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/dcnascimento/biomare-website.git
+   ```
