@@ -57,7 +57,7 @@
 }
 
 .subtitulo { /* Subtítulo do Hero */
-    font-size:22;
+    font-size:24;
     font-weight: var(--peso-regular);
     color: var(--cor-azul-marinho);
     margin-bottom: 30px;
