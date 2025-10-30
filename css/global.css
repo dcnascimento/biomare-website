@@ -1,0 +1,308 @@
+/* ================================================= */
+/* GLOBAL.CSS: COMPONENTES REUTILIZÁVEIS */
+/* ================================================= */
+
+/* --- CONTAINER E LAYOUT BASE --- */
+
+.container {
+    width: calc(100% - (var(--margin-lateral) * 2)); /* Calcula a largura interna */
+    max-width: 1200px; /* Limita o conteúdo a 1200px quando a tela é muito grande */
+    margin: 0 auto; /* Centraliza o container no centro da tela */
+    padding-left: var(--margin-lateral);
+    padding-right: var(--margin-lateral);
+}
+
+.secao {
+    padding-top: var(--padding-vertical);
+    padding-bottom: var(--padding-vertical);
+}
+
+.bg-claro {
+    background-color: var(--cor-azul-claro);
+}
+
+.bg-neutro {
+    background-color: var(--cor-cinza-fundo);
+}
+
+/* --- TIPOGRAFIA DE SEÇÃO --- */
+.titulo-principal { /* H1 - Hero */
+    font-size: 50px;
+    font-weight: var(--peso-bold);
+    color: var(--cor-azul-marinho);
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.titulo-secao { /* H2 - Sobre Nós, Serviços, etc. */
+    font-size: 40px;
+    font-weight: var(--peso-bold);
+    color: var(--cor-azul-marinho);
+    margin-bottom: 40px;
+}
+
+.titulo-missao { /* H3 - Nossa Missão */
+    font-size: 24px;
+    font-weight: var(--peso-bold);
+    color: var(--cor-azul-marinho);
+    margin-bottom: 12px;
+}
+
+.titulo-card { /* H4 - Nome do Produto/Notícia */
+    font-size: 22px;
+    font-weight: var(--peso-bold);
+    color: var(--cor-azul-marinho);
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.subtitulo { /* Subtítulo do Hero */
+    font-size:24;
+    font-weight: var(--peso-regular);
+    color: var(--cor-azul-marinho);
+    margin-bottom: 30px;
+}
+
+/* Corpo de Texto / Padrão */
+p {
+    font-size: 16px;
+    font-weight: var(--peso-regular);
+    line-height: 1.5;
+}
+
+/* BOTÕES DE AÇÃO */
+
+.btn {
+    line-height: 1;
+    padding: 15px 30px;
+    border-radius: var(--borda-arredondada);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: var(--peso-regular);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-primario { /* Sólido: CTA Hero / Fale Conosco */
+    background-color: var(--cor-verde-agua);
+    color: var(--cor-branco);
+    border: 2px solid var(--cor-verde-agua);
+}
+
+.btn-primario:hover {
+    background-color: var(--cor-verde-medio);
+    border-color: var(--cor-verde-medio);
+}
+
+.btn-secundario { /* Vazado (Outline): CTA Saiba Mais / Ver Notícias */
+    background-color: transparent;
+    color: var(--cor-verde-agua);
+    border: 2px solid var(--cor-verde-agua);
+    /* REDUÇÃO DO PADDING: 
+       13px + 16px (texto) + 13px + 4px (bordas) = 46px 
+       Igual à altura do botão sólido (15px + 16px + 15px = 46px)
+    */
+    padding: 13px 28px;
+    display: inline-block;
+}
+
+.btn-secundario:hover {
+    background-color: var(--cor-verde-agua);
+    color: var(--cor-branco);
+}
+
+/* UTILIDADES DE LAYOUT E MARGENS */
+
+/* O container deve centralizar o conteúdo e aplicar a margem lateral (120px) */
+.container {
+    width: calc(100% - (var(--margin-lateral) * 2)); /* Calcula a largura interna */
+    max-width: 1200px; /* Limita o conteúdo a 1200px quando a tela é muito grande */
+    margin: 0 auto; /* Centraliza o container no centro da tela */
+    padding-left: var(--margin-lateral);
+    padding-right: var(--margin-lateral);
+}
+
+.secao {
+    padding-top: var(--padding-vertical);
+    padding-bottom: var(--padding-vertical);
+}
+
+.bg-claro { /* Seção Serviços */
+    background-color: var(--cor-azul-claro);
+}
+
+.bg-neutro { /* Seção Notícias */
+    background-color: var(--cor-cinza-fundo);
+}
+
+/* --- ESTILOS ESPECÍFICOS DO HEADER --- */
+
+.header {
+    background-color: var(--cor-branco);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    height: 80px; 
+}
+
+.header-content {
+    /* O Header Content NÃO PRECISA das margens, o .container já tem */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Centraliza verticalmente o Logo, Links e Botão */
+    height: 100%; 
+}
+
+/* Garante que o container dentro do header não aplique a margem 120px duas vezes */
+.header > .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* --- LOGO E IMAGEM --- */
+.logo img {
+    height: 60px; /* Altura exata definida no Figma */
+    width: auto;
+    display: block;
+}
+
+/* --- LINKS DE NAVEGAÇÃO --- */
+.nav-links {
+    display: flex;
+    gap: 32px; 
+    margin-right: auto; /* Empurra o botão CTA para a extrema direita */
+    margin-left: 200px; /* Afasta o menu do logo, ajuste este valor (X=400px no figma) */
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--cor-azul-marinho);
+    font-size: 16px;
+    font-weight: var(--peso-regular);
+    padding: 2px 0; /* Para dar espaço ao hover/active */
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: var(--cor-verde-agua);
+}
+
+/* --- CORREÇÃO DA MARGEM PARA CONTEÚDO --- */
+
+/* Como o Header é 'fixed', o conteúdo abaixo deve ser empurrado */
+body {
+    font-family: var(--fonte-principal);
+    padding-top: 80px; /* Empurra o Hero para baixo do Header fixo */
+}
+
+/* --- ESTILOS ESPECÍFICOS DO RODAPÉ --- */
+
+.footer {
+    background-color: var(--cor-azul-marinho);
+    color: var(--cor-branco);
+    padding-top: 60px; /* Espaçamento interno superior */
+}
+
+.footer-grid {
+    display: grid;
+    /* Grid de 4 colunas com espaçamento */
+    grid-template-columns: 2fr 1fr 1fr 2fr; 
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* --- COLUNA PADRÃO (LINKS, PRODUTOS, CONTATO) --- */
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    font-size: 16px;
+}
+
+.footer-col a:hover {
+    opacity: 1;
+    color: var(--cor-verde-agua);
+}
+
+.footer-titulo {
+    font-size: 18px;
+    font-weight: var(--peso-bold);
+    color: var(--cor-branco);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* --- COLUNA 1: LOGO E INFO --- */
+
+.logo-footer img {
+    height: 80px; 
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    margin-right: 15px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* --- COLUNA 4: CONTATO --- */
+
+.footer-col p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.footer-col .endereco {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* --- SEÇÃO COPYRIGHT INFERIOR --- */
+
+.footer-copyright-wrapper {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-copyright a {
+    color: inherit;
+    text-decoration: none;
+}

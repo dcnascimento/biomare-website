@@ -1,0 +1,181 @@
+/* ================================================= */
+/* NOTICIAS.CSS: ESTILOS DA PÁGINA DE ÍNDICE DE NOTÍCIAS */
+/* ================================================= */
+
+/* --- GRID DE NOTÍCIAS (Lista) --- */
+
+.lista-noticias-grid {
+    display: grid;
+    /* Lista de Notícias em 2 Colunas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: var(--espacamento-card); /* 24px */
+}
+
+.noticia-item {
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    /* Usa estilos de .card do global.css */
+    display: flex; /* Para alinhar imagem ao lado do texto */
+    align-items: stretch;
+}
+
+.noticia-image-list {
+    flex-shrink: 0; /* Impede que a imagem encolha */
+    width: 180px;
+    height: 100%; /* Ocupa a altura total do bloco */
+    background-color: var(--cor-cinza-fundo);
+    overflow: hidden;
+    /* Apenas a borda esquerda é arredondada */
+    border-top-left-radius: var(--borda-arredondada);
+    border-bottom-left-radius: var(--borda-arredondada);
+}
+
+.noticia-image-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.noticia-list-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia-data-list {
+    font-size: 14px;
+    color: var(--cor-cinza-areia);
+    margin-bottom: 8px;
+}
+
+.noticia-list-info .titulo-card {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.noticia-list-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Faz o parágrafo crescer para empurrar o "Leia Mais" para baixo */
+}
+
+/* --- PAGINAÇÃO (Estilo simples) --- */
+
+.paginacao {
+    text-align: center;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-paginacao {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid var(--cor-cinza-areia);
+    color: var(--cor-preto-suave);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.btn-paginacao.ativo,
+.btn-paginacao:hover {
+    background-color: var(--cor-verde-agua);
+    color: var(--cor-branco);
+    border-color: var(--cor-verde-agua);
+}
+
+/* ================================================= */
+/* ARTIGO.HTML: ESTILOS DE LEITURA (INCLUÍDOS EM NOTICIAS.CSS) */
+/* ================================================= */
+
+.artigo-container {
+    max-width: 800px; /* Limita a largura do texto para melhor leitura (ideal) */
+    margin: 0 auto;
+}
+
+.artigo-meta {
+    font-size: 14px;
+    color: var(--cor-cinza-areia);
+    margin-bottom: 10px;
+}
+
+.artigo-titulo-principal {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: var(--cor-azul-marinho);
+}
+
+.artigo-imagem-destaque {
+    margin-bottom: 40px;
+}
+
+.artigo-imagem-destaque img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--borda-arredondada);
+}
+
+.artigo-imagem-destaque .legenda {
+    font-size: 14px;
+    color: var(--cor-cinza-areia);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.artigo-corpo h2 {
+    font-size: 32px;
+    color: var(--cor-azul-marinho);
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.artigo-corpo h3 {
+    font-size: 24px;
+    color: var(--cor-azul-medio);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.artigo-corpo p,
+.artigo-corpo li {
+    font-size: 18px; /* Fonte maior para melhor leitura do artigo */
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.paragrafo-destaque {
+    font-size: 20px;
+    font-weight: var(--peso-semi-bold);
+    color: var(--cor-preto-suave);
+}
+
+.citacao {
+    border-left: 5px solid var(--cor-verde-agua);
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: var(--cor-azul-medio);
+}
+
+.artigo-cta {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid var(--cor-cinza-fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.artigo-cta p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
